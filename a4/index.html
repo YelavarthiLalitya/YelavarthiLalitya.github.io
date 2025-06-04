@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function calculate(){
+            let a = Number(document.getElementById("t1").value);
+            let b = Number(document.getElementById("t2").value);
+            let output = 
+                "Sum: " + (a + b) + "<br>" +
+                "Difference: " + (a - b) + "<br>" +
+                "Product: " + (a * b) + "<br>" +
+                "Division: " + (b !== 0 ? (a / b).toFixed(2) : "Cannot divide by zero");
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" placeholder="Enter first number"/>
+    <input type="text" id="t2" placeholder="Enter second number"/>
+    <button onclick="calculate()" style="background-color: aqua;">Submit</button>
+    <div id="result" style="margin-top: 10px; font-weight: bold;"></div>
+</body>
+</html>
