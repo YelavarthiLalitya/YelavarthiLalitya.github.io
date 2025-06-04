@@ -6,12 +6,13 @@
     <title>Document</title>
     <script>
         function greet(){
-            alert(txtName.value());
+            alert(txtName1.value() + " + " + txtName2.value() + "is" + txtName1.value() + txtName2.value());
         }
     </script>
 </head>
 <body>
-    <input type="text" id="txtName"/>
+    <input type="text" id="txtName1"/>
+    <input type="text" id="txtName2"/>
     <button onclick="greet()" style="background-color: aqua;">Click</button>
 </body>
 </html>
