@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits List</title>
+</head>
+<body>
+        <h1>Fruits List</h1>
+        <input type="text" placeholder="Type a fruit name..." id="inputField">
+        <button onclick="addToArr()">Add</button>
+        <ul id="fruitList"></ul>
+
+    <script>
+        let fruits = [];
+
+        function addToArr() {
+            let userInput = document.getElementById('inputField').value.trim();
+            if (userInput) {
+                fruits.push(userInput);
+                displayFruits();
+                document.getElementById('inputField').value = ''; 
+            }
+        }
+
+        function displayFruits() {
+            const list = document.getElementById('fruitList');
+            list.innerHTML = ''; 
+            fruits.forEach((fruit) => {
+                let li = document.createElement('li');
+                li.textContent = fruit;
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
