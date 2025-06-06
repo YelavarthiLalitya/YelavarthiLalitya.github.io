@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function register(){
+
+
+
+
+            dvName.innerHTML = "Name: " + txtName.value
+            dvEmail.innerHTML = "Email: " + txtEmail.value
+            dvPw.innerHTML = "Password: " + txtPassword.value
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txtName" placeholder="Enter Name: "/>
+    <br>
+    <input type="text" id="txtEmail" placeholder="Enter Email: "/>
+    <br>
+    <input type="text" id="txtPassword" placeholder="Enter password: "/>
+    <br>
+    <button onclick="register()" style="background-color: yellow">Submit</button>
+
+    <div id = "dvName"></div>
+    <div id = "dvEmail"></div>
+    <div id = "dvPw"></div>
+    
+</html>
