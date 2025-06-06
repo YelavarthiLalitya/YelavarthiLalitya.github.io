@@ -38,10 +38,58 @@
         }
         */
 
-        fruits.forEach((fruit) => console.log(fruit)); // it is like the aka for the above for loop as we don't use for loops in js.
+        //fruits.forEach((fruit) => console.log(fruit)); // it is like the aka for the above for loop as we don't use for loops in js.
+
+        /*
+        const newArr = fruits.map((fruit)=>{
+            return fruit;
+        });
+        console.log(newArr)
+        */
+
+        //fruits.map((fruit) => console.log(fruit));
+
+        /*
+        const newArr = fruits.map((fruit)=>   // don't need curly bracket
+            fruit                             // as it is only 1 line, you dont need 'return' also.
+        );
+        console.log(newArr)
+        */
+
+        const newArr = fruits.filter((fruit)=> fruit == 'apple');
+        console.log(newArr)                                
+        // map will return all the elements to the new array. The filter will return only the ones where the condition is matching!
+
+
+        const na = fruits.find((fruit)=> fruit=='apple'); 
+        console.log(na)
+        //find will be used when we know we have only one value to be returned, and it will not be printed as an array.
+
+        const score = [4, 2, 1, 6, 7];
+        // requirement is we have to display these numbers with prefix 'id'
+        score.map((number)=> console.log('ID00'+number));
+        // now put them into a new array and print them.
+        const scr = score.map((number)=>'ID00'+number);
+        console.log(scr)
+
+        // new arr, in that arr, only values >2
+        const newScr = score.filter((e)=> e>2);
+        console.log(newScr);
+
+        const newScrr = score.find((e)=> e>2);
+        console.log(newScrr);   // find will only give the first element that it finds >2.
+
+        const ah = score.reduce((sum, e)=> sum+e);
+        console.log(ah);              // when using reduce, you don't have to write the traditional code for the sum. Reduce will always return only 1 value.
+
+        const add=(...args)=>{
+            const total = args.reduce((sum, e)=> sum + e);
+            return total;
+        }
+        const result = add(4,6,7,9,3);
+        console.log(result);
 
         
-
     </script>
 </body>
 </html>
