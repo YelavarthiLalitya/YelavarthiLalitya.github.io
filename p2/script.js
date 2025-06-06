@@ -18,6 +18,14 @@ const showRegister = () => {
      <p><input type="text" id="txtEmail"></p>
     <p><input type="password" id="txtPass"></p>
     <button>Register</button>
+    <button onClick = 'showLogin()'>Create Account</button></p>
+    `
+    root.innerHTML = str
+}
+
+const showHome = () => {
+      let str=`
+    <h1>Welcome</h1>
     `
     root.innerHTML = str
 }
