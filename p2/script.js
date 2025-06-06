@@ -20,3 +20,4 @@ const showRegister = () => {
     <button>Register</button>
     `
     root.innerHTML = str
+}
