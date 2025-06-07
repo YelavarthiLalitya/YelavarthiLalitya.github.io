@@ -8,6 +8,24 @@
 <body>
     <div id="dvUsers"></div>
     <script>
+        function a(){
+            return "Hello"
+        }
+        /*
+        function c(){
+            resolve "Completed"
+            reject "Error"
+        }
+        */
+        function b(){
+            return "Good Morning"
+        }
+        a().then(()=>b());
+        //a();
+        //b();
+        // make an arrangement st funtion b runs only after a says Hello.
+
+
         const url = "https://jsonplaceholder.typicode.com/users"
         let str = "<div>"
         fetch(url)
@@ -21,3 +39,7 @@
     </script>
 </body>
 </html>
+
+<!-- fetch is the inbuilt javascript funtion to get data. Fetch takes argument as url. 
+Fetch returns (an array of objects) json file. 
+ -->
