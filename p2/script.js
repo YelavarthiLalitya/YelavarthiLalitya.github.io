@@ -1,4 +1,5 @@
-const users = []
+const users = [];
+const user={};
 const showLogin = () => {
     let str=`
     <div>
