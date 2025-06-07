@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!-- 
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,6 +41,46 @@
 </body>
 </html>
 
-<!-- fetch is the inbuilt javascript funtion to get data. Fetch takes argument as url. 
-Fetch returns (an array of objects) json file. 
- -->
+<!--
+fetch is the inbuilt javascript funtion to get data. Fetch takes argument as url. 
+Fetch returns (an array of objects) json file. -->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check Name</title>
+</head>
+<body>
+  <input type="text" placeholder="Type a name" id="nameGiven" />
+  <button onclick="check()">Submit</button>
+  <div id="result"></div>
+
+  <script>
+    const url = "https://jsonplaceholder.typicode.com/users";
+    let usersList = [];
+
+    fetch(url)
+      .then(res => res.json())
+      .then(users => {
+        usersList = users; 
+      });
+
+    const check = () => {
+      const input = document.getElementById("nameGiven").value.trim();
+      const found = usersList.some(user => user.name.toLowerCase() === input.toLowerCase());
+
+      const resultDiv = document.getElementById("result");
+      if (found) {
+        resultDiv.innerText = "Name is present!";
+      } else {
+        resultDiv.innerText = "Name not found:(";
+      }
+    };
+  </script>
+</body>
+</html>
